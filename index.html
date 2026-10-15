@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <title>Gen4P: Video Generators are 4D Perceivers</title>
+    <link rel="icon" type="image/png" href="assets/g-v0.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="manifest.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body id="top">
+    <header class="section-nav">
+        <a class="site-mark" href="#top">Gen4P</a>
+        <nav class="section-links" aria-label="Project sections">
+            <a href="#pipeline-title">Method</a>
+            <a href="#comparison-title">Qualitative Results</a>
+            <a href="#additional-title">Additional Results</a>
+            <!-- <a href="#acknowledgment-title">Acknowledgment</a> -->
+            <a href="#bibtex-title">BibTeX</a>        </nav>
+    </header>
+    <main>
+        <div class="page-content">
+            <header class="page-header">
+                <div class="brand-lockup">
+                    <img class="project-wordmark" src="assets/gen4p-v0.png" width="1944" height="809" alt="Gen4P">
+                    <h1 class="publication-title">Gen4P: Video Generators are 4D Perceivers</h1>
+                </div>
+                <div class="publication-authors author-names">
+                    <span class="author-block"><a href="https://www.linkedin.com/in/yitong-xia-5a111120a/?isSelfProfile=true">Yitong Xia</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://jzr99.github.io/">Zeren Jiang</a><sup>2</sup>,</span>
+                    <span class="author-block"><a href="https://physicalvision.github.io/people/~chuanxia">Chuanxia Zheng</a><sup>1</sup></span>
+                </div>
+                <div class="publication-authors author-affiliations">
+                    <span class="author-block"><sup>1</sup>Physical Vision Group (PVG), Nanyang Technological University (NTU)</span> <br>
+                    <span class="author-block"><sup>2</sup>Visual Geometry Group (VGG), Oxford University</span>
+                </div>
+                <div class="publication-links">
+                    <span class="publication-button is-disabled" aria-disabled="true">
+                        <svg class="publication-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" x2="16" y1="13" y2="13"></line><line x1="8" x2="16" y1="17" y2="17"></line></svg>
+                        <span>Paper (TBD)</span>
+                    </span>
+                    <span class="publication-button is-disabled" aria-disabled="true">
+                        <svg class="publication-icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="5" x="2" y="3" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path><path d="M10 12h4"></path></svg>
+                        <span>arXiv (TBD)</span>
+                    </span>
+                    <span class="publication-button is-disabled" aria-disabled="true">
+                        <svg class="publication-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.28-.36 6.72-1.61 6.72-7.25A5.65 5.65 0 0 0 19.22 3.3 5.3 5.3 0 0 0 19.08 1S17.9.65 15 2.48a13.38 13.38 0 0 0-7 0C5.1.65 3.92 1 3.92 1a5.3 5.3 0 0 0-.14 2.3 5.65 5.65 0 0 0-1.5 3.95c0 5.63 3.44 6.88 6.72 7.25A4.8 4.8 0 0 0 9 18v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        <span>Code (TBD)</span>
+                    </span>
+                    <a class="publication-button" href="#bibtex-title">
+                        <svg class="publication-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <span>BibTeX</span>
+                    </a>
+                </div>
+            </header>
+
+            <figure class="teaser-figure">
+                <p class="project-tldr teaser-note">Faithful structure preservation and motion tracking on challenging scenes like flamingo.</p>
+                <div class="pipeline-preview">
+                    <img src="assets/teaser_v2-flamingo.png" width="10995" height="1996" alt="Gen4P 3D tracking results on a flamingo scene">
+                    <a href="assets/teaser_v2-flamingo.png" aria-label="Open the full-size Gen4P teaser image" title="Open full-size image"></a>
+                </div>
+            </figure>
+
+            <div class="project-introduction">
+                <h2 class="section-title" id="pipeline-title">Method</h2>
+                <p class="project-tldr">TL;DR: Gen4P repurposes a video generator for feed-forward 4D perception, with single-pass encoding, on-demand decoding for spatial flexibility, continuous-time embeddings for temporal flexibility, and a frozen depth LoRA as a plug-in geometry prior.</p>
+                <figure class="pipeline-figure">
+                    <div class="pipeline-preview">
+                        <img src="assets/pipeline_v2-thumbnail.webp" width="2400" height="709" loading="lazy" alt="Overview of the Gen4P pipeline">
+                        <a href="assets/pipeline_v2%20%282%29.pdf" aria-label="Open the full-size Gen4P pipeline PDF" title="Open full-size PDF"></a>
+                    </div>
+                    <figcaption><strong>Overview of Gen4P.</strong> The input video is encoded into scene tokens <i class="math-expression">F</i> <em>in a single pass</em> by the <i>Video Generative Encoder</i>, which consists of a frozen VAE encoder and DiT, an optional frozen Depth-LoRA, and a trainable 4D-LoRA. The cross-attention <i>Query Decoder</i> is queried independently for each query <span class="math-expression"><i>q</i>(<i>u</i>, <i>v</i>, <i>t</i><sub>src</sub>, <i>t</i><sub>tgt</sub>, <i>t</i><sub>cam</sub>)</span>, where the query timestamps are parameterized as continuous time embeddings. The decoder outputs the corresponding 3D and 2D point attributes, enabling the full construction of 3D tracks, depth maps and camera poses.</figcaption>
+                </figure>
+            </div>
+
+            <section aria-labelledby="comparison-title">
+                <h2 class="section-title" id="comparison-title">Qualitative Results of 3D Tracking</h2>
+                <!-- <p class="section-note">To visualize the dynamic tracking results. <b>NO post processing applied.</b> -->
+                    <!-- Please use the controls beside each input to play and inspect the synchronized results at a selected frame rate. -->
+                </p>
+                <div id="comparison-scenes"></div>
+            </section>
+
+            <section aria-labelledby="additional-title">
+                <h2 class="section-title" id="additional-title">Additional Qualitative Results</h2>
+                <p class="section-note">
+                    <!-- To visualize the performances on a variety of scenes. <br> -->
+                    <b>Confidence-based filtering are applied for the best visual quality.</b> <br> We tune with our best efforts to maintain the visual quality on all methods.
+
+
+                </p>
+                <div id="additional-results"></div>
+            </section>
+
+            <section class="publication-section" aria-labelledby="acknowledgment-title">
+                <h2 class="section-title" id="acknowledgment-title">Acknowledgment</h2>
+                <div class="publication-content">
+                    <p> This research is supported by the NTU SUG-NAP and National Research Foundation, Singapore, under its NRF Fellowship Award NRF-NRFF17-2025-0009. We would like to acknowledge the High Performance Computing Centre of NTU Singapore, for providing the computing resources, facilities, and services that have contributed significantly to this work. Zeren Jiang is supported by Clarendon Scholarship. </p>
+                </div>
+            </section>
+
+            <section class="publication-section" aria-labelledby="bibtex-title">
+                <h2 class="section-title" id="bibtex-title">BibTeX</h2>
+                <div class="publication-content">
+                <pre class="bibtex"><code>@misc{TODOxia2026gen4p,
+    title={Gen4P: Video Generators are 4D Perceivers},
+    author={Yitong Xia and Zeren Jiang and Chuanxia Zheng},
+    year={2026},
+}</code></pre>
+                </div>
+            </section>
+
+            <noscript>This page requires JavaScript to build the local video lists and synchronize comparisons.</noscript>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>This website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        <p>This webpage is built using templates from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a href="https://geo4d.github.io/">Geo4D</a>. We thank the authors for making their project pages publicly available.</p>
+    </footer>
+</body>
+</html>
