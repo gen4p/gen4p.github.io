@@ -223,7 +223,7 @@ section + section {
 }
 
 .teaser-figure {
-    width: min(1280px, 100%);
+    width: min(1100px, 100%);
     margin: 0 auto 72px;
 }
 
@@ -260,7 +260,8 @@ section + section {
     background: var(--surface);
 }
 
-.pipeline-preview img {
+.pipeline-preview img,
+.pipeline-preview video {
     display: block;
     width: 100%;
     height: auto;

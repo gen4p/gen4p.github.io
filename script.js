@@ -776,3 +776,6 @@ function renderAdditionalResults() {
 
 renderComparisonScenes();
 renderAdditionalResults();
+
+const teaserVideo = document.querySelector(".teaser-figure video");
+teaserVideo.addEventListener("ended", () => { teaserVideo.currentTime = 0; });
