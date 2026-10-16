@@ -173,6 +173,13 @@ main {
     stroke-width: 2;
 }
 
+.publication-brand-icon {
+    width: 18px;
+    flex: none;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
 a.publication-button:hover {
     background: #1f1f1f;
 }
